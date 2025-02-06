@@ -41,17 +41,20 @@ function OnDeviceTilt(e) {
 
 
 	if ('beta' in e && e.beta !== null) {
+		console.log(e.beta);
 		document.getElementById("beta").textContent = e.beta;
 		cube.rotation.x = (e.beta * Math.PI) / 180;
 	}
 
 	if ('gamma' in e && e.gamma !== null) {
+		console.log(e.gamma);
 		document.getElementById("gamma").textContent = e.gamma;
 		cube.rotation.y = (e.gamma * Math.PI) / 180;
 	}
 
 
 	if ('alpha' in e && e.alpha !== null) {
+		console.log(e.alpha);
 		document.getElementById("alpha").textContent = e.alpha;
 		//cube.rotation.z = (e.alpha * Math.PI) / 180;
 	}
