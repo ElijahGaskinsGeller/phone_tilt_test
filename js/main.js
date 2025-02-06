@@ -51,21 +51,6 @@ function OnDeviceTilt(e) {
 
 }
 
-function OnDeviceMotion(e) {
-
-
-	console.log(e);
-
-	document.getElementById("alpha").textContent = e.alpha;
-	document.getElementById("beta").textContent = e.beta;
-	document.getElementById("gamma").textContent = e.gamma;
-
-	cube.rotation.x = (e.beta * Math.PI) / 180;
-	cube.rotation.y = (e.gamma * Math.PI) / 180;
-	//cube.rotation.z = (e.alpha * Math.PI) / 180;
-
-}
-
 
 function animate() {
 	//cube.rotation.x += 0.01;
@@ -77,6 +62,5 @@ function animate() {
 
 window.addEventListener("resize", OnWindowResize);
 window.addEventListener("deviceorientation", OnDeviceTilt);
-//window.addEventListener("devicemotion", OnDeviceTilt);
 
 renderer.setAnimationLoop(animate);
