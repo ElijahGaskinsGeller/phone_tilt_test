@@ -40,18 +40,18 @@ function OnDeviceTilt(e) {
 	console.log(e);
 
 
-	if (!Number.isNaN(e.beta)) {
+	if (e.beta !== null) {
 		document.getElementById("beta").textContent = e.beta;
 		cube.rotation.x = (e.beta * Math.PI) / 180;
 	}
 
-	if (!Number.isNaN(e.gamma)) {
+	if (e.gamma !== null) {
 		document.getElementById("gamma").textContent = e.gamma;
 		cube.rotation.y = (e.gamma * Math.PI) / 180;
 	}
 
 
-	if (!Number.isNaN(e.alpha)) {
+	if (e.alpha !== null) {
 		document.getElementById("alpha").textContent = e.alpha;
 		//cube.rotation.z = (e.alpha * Math.PI) / 180;
 	}
