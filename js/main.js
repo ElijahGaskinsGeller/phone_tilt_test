@@ -39,20 +39,20 @@ function OnDeviceTilt(e) {
 
 	console.log(e);
 
-	document.getElementById("alpha").textContent = e.alpha;
-	document.getElementById("beta").textContent = e.beta;
-	document.getElementById("gamma").textContent = e.gamma;
 
-	if (e.beta !== null) {
+	if (!Number.isNaN(e.beta)) {
+		document.getElementById("beta").textContent = e.beta;
 		cube.rotation.x = (e.beta * Math.PI) / 180;
 	}
 
-	if (e.gamma !== null) {
+	if (!Number.isNaN(e.gamma)) {
+		document.getElementById("gamma").textContent = e.gamma;
 		cube.rotation.y = (e.gamma * Math.PI) / 180;
 	}
 
 
-	if (e.alpha !== null) {
+	if (!Number.isNaN(e.alpha)) {
+		document.getElementById("alpha").textContent = e.alpha;
 		//cube.rotation.z = (e.alpha * Math.PI) / 180;
 	}
 
