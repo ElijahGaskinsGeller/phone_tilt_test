@@ -45,7 +45,7 @@ function OnDeviceTilt(e) {
 
 	cube.rotation.x = (e.beta * Math.PI) / 180;
 	cube.rotation.y = (e.gamma * Math.PI) / 180;
-	//cube.rotation.z = (e.alpha * Math.PI) / 180;
+	cube.rotation.z = (e.alpha * Math.PI) / 180;
 
 
 
