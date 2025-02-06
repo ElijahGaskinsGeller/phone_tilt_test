@@ -43,9 +43,18 @@ function OnDeviceTilt(e) {
 	document.getElementById("beta").textContent = e.beta;
 	document.getElementById("gamma").textContent = e.gamma;
 
-	cube.rotation.x = (e.beta * Math.PI) / 180;
-	cube.rotation.y = (e.gamma * Math.PI) / 180;
-	cube.rotation.z = (e.alpha * Math.PI) / 180;
+	if (e.beta !== null) {
+		cube.rotation.x = (e.beta * Math.PI) / 180;
+	}
+
+	if (e.gamma !== null) {
+		cube.rotation.y = (e.gamma * Math.PI) / 180;
+	}
+
+
+	if (e.alpha !== null) {
+		//cube.rotation.z = (e.alpha * Math.PI) / 180;
+	}
 
 
 
